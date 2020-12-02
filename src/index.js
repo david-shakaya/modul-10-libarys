@@ -1,30 +1,25 @@
-/*  Библиотека всплываюшее окно
-* https://basiclightbox.electerious.com/ 
-* Устанавливаем с помощью npm Но читаем документацию
-*/
+import './modal.js' //Импорт всего файла с модалкой
+import Siema from 'siema';
 
-import * as basicLightbox from 'basiclightbox'  // Импортируем  плагин
-import '../node_modules/basiclightbox/src/styles/main.scss'  //Импортируем стили установленной библиотеки
-import './sass/styles.scss'
+const btnNextRef = document.querySelector('.btn-siema-next');
+const btnPrewRef = document.querySelector('.btn-siema-prew');
 
-const buttonOpenRef = document.querySelector('.open');
-const instance = basicLightbox.create(  
-    document.querySelector('#modal')
-)
-buttonOpenRef.addEventListener('click',openModal)
+const mySiema = new Siema({
+    loop:() => {} 
+});
 
-function openModal() {
-    instance.show()
+btnNextRef.addEventListener('click', () => {
+    mySiema.next()
+})
+btnPrewRef.addEventListener('click', () => {
+    mySiema.prev()
+    console.log('');
+})
 
-    if (instance.visible()) {
-        const close =document.querySelector('.close');
-        close.addEventListener('click', () => {
-            instance.close()                 //Просто вызываем встроееный метод и не нужно снимать слушатель
-        })
-    }
-     console.log(instance.visible());
-}
-// еще НУЖНО РЕаЛИЗОВАТЬ СНЯТИЕ СЛУШАТЕЛЯ ПОСЛЕ ЗАКРЫТИЯ МОДАЛКИ
+
+import './sass/styles.scss' 
+
+
 
 
 
