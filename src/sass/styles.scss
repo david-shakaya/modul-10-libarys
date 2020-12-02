@@ -39,3 +39,58 @@ img {
   width: 480px;
   height: 300px;
 }
+
+.gumshoe-wrapper {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.box {
+  padding-left: 125px;
+}
+#nav-menu {
+  display: inline;
+}
+
+#nav-menu li.active a {
+  font-weight: bold;
+}
+
+#nav-menu {
+  position: fixed;
+}
+
+#nav-menu li.active {
+  background-color: black;
+}
+
+#nav-menu li.active a {
+  color: white;
+}
+
+/**
+ * Sections
+ */
+.section {
+  color: #ffffff;
+  height: 500px;
+  width: 300px;
+  margin: 0;
+  padding: 2em;
+}
+
+#eenie {
+  background-color: #0088cc;
+}
+
+#meenie {
+  background-color: rebeccapurple;
+}
+
+#miney {
+  background-color: #272727;
+}
+
+#mo {
+  background-color: #f42b37;
+}

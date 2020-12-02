@@ -16,10 +16,14 @@ btnPrewRef.addEventListener('click', () => {
     console.log('');
 })
 
-
 import './sass/styles.scss' 
 
 
+/* 
+* - gumshoe
+*/  
+
+ var spy = new Gumshoe('#nav-menu a');
 
 
 
