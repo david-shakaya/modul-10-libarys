@@ -1,5 +1,8 @@
 import './modal.js' //Импорт всего файла с модалкой
 import Siema from 'siema';
+import './PNotify.js'
+
+
 
 const btnNextRef = document.querySelector('.btn-siema-next');
 const btnPrewRef = document.querySelector('.btn-siema-prew');

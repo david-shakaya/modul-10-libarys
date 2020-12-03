@@ -13,3 +13,5 @@ https://www.npmjs.com/package/siema
 
 Библиотека gumshoe. Scrollspy Navigation - Переход по лендингу якорями.
 https://github.com/cferdinandi/gumshoe
+
+Всплывающие алерты https://sciactive.com/pnotify/
