@@ -2,6 +2,7 @@ import './modal.js' //Импорт всего файла с модалкой
 import Siema from 'siema';
 import './PNotify.js'
 import './tippy.js'
+import '../json-lesson-2/json-format-1'
 
 
 
