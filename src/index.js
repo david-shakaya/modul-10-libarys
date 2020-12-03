@@ -1,6 +1,7 @@
 import './modal.js' //Импорт всего файла с модалкой
 import Siema from 'siema';
 import './PNotify.js'
+import './tippy.js'
 
 
 

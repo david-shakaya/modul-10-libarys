@@ -54,6 +54,7 @@
     "basiclightbox": "^5.0.3",
     "core-js": "^3.6.5",
     "handlebars": "^4.7.6",
-    "siema": "^1.5.1"
+    "siema": "^1.5.1",
+    "tippy.js": "^6.2.7"
   }
 }
