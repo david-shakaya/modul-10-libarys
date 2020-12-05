@@ -39,27 +39,56 @@ const value = localStorage.getItem('obj') // >> ВОзвращает с хран
 const parse = JSON.parse(value)  // Переводит в обьект
 console.log('распарсим:', parse);
 
+
+/* 
+* Делаем форму для отправки в локал. хран
+*/
+
 const formRef = document.querySelector('.form-js');
 const textArRef = document.querySelector('.form-js > textarea');
-
-
 
 
 formRef.addEventListener('submit', getText)
 textArRef.addEventListener('input', getValue)
 
+
+populateMessage()
+
+
 function getText(e) {
   e.preventDefault()
 
-console.dir(e.target[1].value);
+  console.dir(e.target[1].value);
+  formRef.reset() // При нажатии на кнопку отправить очищаем содержимое техтареа
+  localStorage.removeItem('usersMessage') //При нажатии на кнопку отправить Удаляем usersMessage из локального хранилищаа
+ 
 }
 
 function getValue(e) {
   
-  const strJson = JSON.stringify(e.target.value);
-  localStorage.setItem('strJson', strJson)
-  
+  const message = e.target.value //Текст вводимый пользователем в текстАреа
+  localStorage.setItem('usersMessage', message) //Отправляем в локал.хран то что печатают в техтАрее
+
 }
 
-// Остановился на 20 минуте
+function populateMessage() {
+  const seveMesage = localStorage.getItem('usersMessage') // ВОзвращает из лок.хранилища свойство ключа usersMessage. То что написал пользов в техАреа
+if (seveMesage) { // Если seveMesage не пустой то присвой тахтарее то что записано в локал.хран
+  textArRef.value = seveMesage
+  }
+}
 
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>> Шаблонизация. Шаблонизатор хендалбар <<<<<<<<<<<<<<<<<<<<<
+import itemsTemplate from '../src/templates/galery-items.hbs'
+
+const objArr = itemsTemplate({
+  tehnologi: ['HTML', 'CSS', 'JS', 'JSON', 'GitHub']
+})
+
+ 
+const ulRef = document.querySelector('.ul-hbs');
+
+ulRef.insertAdjacentHTML('beforeend', objArr);
