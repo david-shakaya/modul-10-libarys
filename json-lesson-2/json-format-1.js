@@ -92,3 +92,14 @@ const objArr = itemsTemplate({
 const ulRef = document.querySelector('.ul-hbs');
 
 ulRef.insertAdjacentHTML('beforeend', objArr);
+
+// // >>>>>>>>>>>  - Задача!
+// //Добавить страны через шаблон
+
+// import itemsTemplate from '../src/templates/galery-items.hbs'
+// import countries from './country.json'
+
+// const ulRef = document.querySelector('.ul-hbs');
+// const markup = itemsTemplate(countries)
+
+// ulRef.insertAdjacentHTML('beforeend', markup)
